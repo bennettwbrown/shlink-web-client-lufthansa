@@ -1,4 +1,3 @@
-import { MAIN_COLOR } from '@shlinkio/shlink-frontend-kit';
 
 export interface ShlinkLogoProps {
   height?: string;
