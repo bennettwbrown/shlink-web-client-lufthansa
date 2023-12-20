@@ -1,8 +1,9 @@
 @import 'node_modules/@shlinkio/shlink-frontend-kit/dist/base';
 
 .main-header.main-header {
-  color: white;
-  background-color: var(--brand-color) !important;
+  // color: white;
+  font-family: 'lufthansa-bold', sans-serif;
+  background-color: #ffffff !important;
 
   .navbar-brand {
     color: inherit !important;

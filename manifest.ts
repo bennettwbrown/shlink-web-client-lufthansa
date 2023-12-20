@@ -5,8 +5,8 @@ export const manifest: Partial<ManifestOptions> = {
   name: 'Shlink',
   start_url: '/',
   display: 'standalone',
-  theme_color: '#4696e5',
-  background_color: '#4696e5',
+  theme_color: '#07184C',
+  background_color: '#ffffff',
   icons: [
     {
       src: './icons/icon-16x16.png',
