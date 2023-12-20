@@ -1,14 +1,12 @@
 import { MAIN_COLOR } from '@shlinkio/shlink-frontend-kit';
 
 export interface ShlinkLogoProps {
-  color?: string;
-  className?: string;
   height?: string;
   width?: string;
   paddingBottom?: string;
 }
 
-export const ShlinkLogo = ({ color = MAIN_COLOR, className, height, width, paddingBottom }: ShlinkLogoProps) => (
+export const ShlinkLogo = ({ height, width, paddingBottom }: ShlinkLogoProps) => (
   <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1026.000000 1024.000000" height={height}
     width={width} preserveAspectRatio="xMidYMid meet" style={{ paddingBottom }}
