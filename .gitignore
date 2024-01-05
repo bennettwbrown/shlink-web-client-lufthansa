@@ -13,3 +13,5 @@ npm-debug.log*
 docker-compose.override.yml
 home
 public/servers.json*
+
+.env

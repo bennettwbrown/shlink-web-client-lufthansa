@@ -13,7 +13,29 @@ interface SetAutoConnect {
   autoConnect: boolean;
 }
 
-const initialState: ServersMap = {};
+
+// 
+// NEWLY ADDED CODE FOR OVERRIDING THE BASE CONFIG. 
+// Access environment variables
+
+const serverApiKey = process.env.SHLINK_SERVER_API_KEY;
+
+// Define your hardcoded server data
+const hardcodedServer: ServerWithId = {
+  id: 'lufthansa-link', // Unique ID for the server
+  name: 'Lufthansa Link',  // Server name
+  url: 'https://lh-link-u7201.vm.elestio.app', // Server URL
+  apiKey: serverApiKey || 'default-api-key', // API Key
+  autoConnect: true, // Auto connect setting
+};
+
+// Set the hardcoded server as the initial state
+const initialState: ServersMap = {
+  [hardcodedServer.id]: hardcodedServer,
+};
+
+// OLD FOR WHEN IN PRODUCTION. 
+// const initialState: ServersMap = {};
 
 const serverWithId = (server: ServerWithId | ServerData): ServerWithId => {
   if ('id' in server) {
