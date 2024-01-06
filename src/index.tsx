@@ -9,7 +9,6 @@ import './index.scss';
 
 const store = setUpStore(container);
 const { App, ScrollToTop, ErrorHandler, appUpdateAvailable } = container;
-
 createRoot(document.getElementById('root')!).render( // eslint-disable-line @typescript-eslint/no-non-null-assertion
   <Provider store={store}>
     <BrowserRouter basename={pack.homepage}>

@@ -17,15 +17,12 @@ interface SetAutoConnect {
 // 
 // NEWLY ADDED CODE FOR OVERRIDING THE BASE CONFIG. 
 // Access environment variables
-
-const serverApiKey = process.env.SHLINK_SERVER_API_KEY;
-
 // Define your hardcoded server data
 const hardcodedServer: ServerWithId = {
   id: 'lufthansa-link', // Unique ID for the server
   name: 'Lufthansa Link',  // Server name
   url: 'https://lh-link-u7201.vm.elestio.app', // Server URL
-  apiKey: serverApiKey || 'default-api-key', // API Key
+  apiKey: 'default', // API Key
   autoConnect: true, // Auto connect setting
 };
 

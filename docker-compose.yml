@@ -4,12 +4,12 @@ services:
   shlink_web_client_node:
     container_name: shlink_web_client_node
     image: node:20.7-alpine
-    command: /bin/sh -c "cd /home/shlink/www && npm install && npm run start"
+    command: /bin/sh -c "cd /home/shlink/www && npm install && npm run build && npm run start"
     volumes:
       - ./:/home/shlink/www
     ports:
       - "3000:3000"
       - "56745:56745"
       - "4173:4173"
-    env_file:
-      - .env
+    environment:
+      - REACT_APP_SHLINK_SERVER_API_KEY="03f8d3a0-5a1e-4f5b-a93d-72da0bd810ff"
