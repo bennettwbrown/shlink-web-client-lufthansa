@@ -11,5 +11,3 @@ services:
       - "3000:3000"
       - "56745:56745"
       - "4173:4173"
-    environment:
-      - REACT_APP_SHLINK_SERVER_API_KEY="03f8d3a0-5a1e-4f5b-a93d-72da0bd810ff"
